@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "NSLocation"
   s.module_name  = "NSLocation"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "No-Sweat/No-Shit Location Service for iOS"
 
   s.description  = <<-DESC
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/Rhumbix/NSLocation.git"
   s.license      = { :type => "MIT", :file => "LICENSE" }
 
-  s.author             = { "Rhumbix" => "dev@rhumbix.com" }
+  s.author             = { "Kenneth Jiang" => "kenneth.jiang@gmail.com" }
   s.social_media_url   = "https://www.facebook.com/Rhumbix"
 
   s.platform     = :ios, "8.0"
