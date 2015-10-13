@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  NSLocationExample
-//
-//  Created by zekunyan on 15/10/5.
-//  Copyright © 2015年 tutuge. All rights reserved.
-//
 
 import UIKit
 import Teleport_NSLog
@@ -18,8 +11,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.sharedApplication().setMinimumBackgroundFetchInterval(
             UIApplicationBackgroundFetchIntervalMinimum)
-        
-//        TELEPORT_DEBUG = true
+
+        TELEPORT_DEBUG = true
         Teleport.startWithForwarder(SimpleHttpForwarder(aggregatorUrl: "http://ec2-52-8-92-47.us-west-1.compute.amazonaws.com:8080/"))
         return true
     }

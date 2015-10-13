@@ -66,13 +66,13 @@
                                     <segment title="3 km"/>
                                 </segments>
                                 <connections>
-                                    <action selector="accuracyChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="xsm-qS-JTl"/>
+                                    <action selector="accuracyChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="ZkU-WF-AAz"/>
                                 </connections>
                             </segmentedControl>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zCZ-TT-lkj">
                                 <rect key="frame" x="16" y="40" width="51" height="31"/>
                                 <connections>
-                                    <action selector="enabledChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="uvI-N8-1BT"/>
+                                    <action selector="enabledChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="3W5-Y0-UQb"/>
                                 </connections>
                             </switch>
                         </subviews>

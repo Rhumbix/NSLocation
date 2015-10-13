@@ -13,7 +13,6 @@
 		9FFB13AF1BCD53FA000685D8 /* AutoAdjustedLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB13AB1BCD53FA000685D8 /* AutoAdjustedLocationViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		9FFB13B01BCD53FA000685D8 /* FetchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB13AC1BCD53FA000685D8 /* FetchViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F4DECB541BC2ADEE00C7E3AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DECB531BC2ADEE00C7E3AB /* AppDelegate.swift */; };
-		F4DECB561BC2ADEE00C7E3AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DECB551BC2ADEE00C7E3AB /* ViewController.swift */; };
 		F4DECB591BC2ADEE00C7E3AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DECB571BC2ADEE00C7E3AB /* Main.storyboard */; };
 		F4DECB5B1BC2ADEE00C7E3AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4DECB5A1BC2ADEE00C7E3AB /* Assets.xcassets */; };
 		F4DECB5E1BC2ADEE00C7E3AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DECB5C1BC2ADEE00C7E3AB /* LaunchScreen.storyboard */; };
@@ -29,7 +28,6 @@
 		E0345AADC991DEE89E90AA64 /* Pods-NSLocationExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSLocationExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NSLocationExample/Pods-NSLocationExample.debug.xcconfig"; sourceTree = "<group>"; };
 		F4DECB501BC2ADEE00C7E3AB /* NSLocationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSLocationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DECB531BC2ADEE00C7E3AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F4DECB551BC2ADEE00C7E3AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F4DECB581BC2ADEE00C7E3AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4DECB5A1BC2ADEE00C7E3AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4DECB5D1BC2ADEE00C7E3AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				F4DECB531BC2ADEE00C7E3AB /* AppDelegate.swift */,
-				F4DECB551BC2ADEE00C7E3AB /* ViewController.swift */,
 				F4DECB571BC2ADEE00C7E3AB /* Main.storyboard */,
 				9FFB13A91BCD53FA000685D8 /* LocationViewController.swift */,
 				9FFB13AA1BCD53FA000685D8 /* WhateverViewController.swift */,
@@ -228,7 +225,6 @@
 			files = (
 				9FFB13AE1BCD53FA000685D8 /* WhateverViewController.swift in Sources */,
 				9FFB13AD1BCD53FA000685D8 /* LocationViewController.swift in Sources */,
-				F4DECB561BC2ADEE00C7E3AB /* ViewController.swift in Sources */,
 				9FFB13AF1BCD53FA000685D8 /* AutoAdjustedLocationViewController.swift in Sources */,
 				F4DECB541BC2ADEE00C7E3AB /* AppDelegate.swift in Sources */,
 				9FFB13B01BCD53FA000685D8 /* FetchViewController.swift in Sources */,
