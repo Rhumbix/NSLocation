@@ -3,4 +3,5 @@ use_frameworks!
 
 target 'NSLocationExample' do
     pod "NSLocation", :path => "../"
+    pod 'Teleport-NSLog', '~> 0.2'
 end

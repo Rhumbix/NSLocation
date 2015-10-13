@@ -7,16 +7,38 @@
 //
 
 import UIKit
+import Teleport_NSLog
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        UIApplication.sharedApplication().setMinimumBackgroundFetchInterval(
+            UIApplicationBackgroundFetchIntervalMinimum)
+        
+//        TELEPORT_DEBUG = true
+        Teleport.startWithForwarder(SimpleHttpForwarder(aggregatorUrl: "http://ec2-52-8-92-47.us-west-1.compute.amazonaws.com:8080/"))
         return true
+    }
+    
+    // Support for background fetch
+    func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+        
+        if let tabBarController = window?.rootViewController as? UITabBarController,
+            viewControllers = tabBarController.viewControllers
+        {
+            for viewController in viewControllers {
+                if let fetchViewController = viewController as? FetchViewController {
+                    fetchViewController.fetch {
+                        fetchViewController.updateUI()
+                        completionHandler(.NewData)
+                    }
+                }
+            }
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {

@@ -53,7 +53,9 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-NSLocationExample/NSLocation.framework'
+  install_framework 'Pods-NSLocationExample/Teleport_NSLog.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-NSLocationExample/NSLocation.framework'
+  install_framework 'Pods-NSLocationExample/Teleport_NSLog.framework'
 fi

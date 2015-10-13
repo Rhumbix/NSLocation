@@ -1,8 +1,10 @@
 PODS:
   - NSLocation (0.2.0)
+  - Teleport-NSLog (0.2.1)
 
 DEPENDENCIES:
   - NSLocation (from `../`)
+  - Teleport-NSLog (~> 0.2)
 
 EXTERNAL SOURCES:
   NSLocation:
@@ -10,5 +12,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   NSLocation: 340b315561e0a6941a2c7ebf45ce3694e6ac3991
+  Teleport-NSLog: eeb094445ba4c00e97e72492d2168fcf1a1adfdb
 
 COCOAPODS: 0.38.2
