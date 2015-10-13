@@ -1,0 +1,14 @@
+PODS:
+  - NSLocation (0.2.0)
+
+DEPENDENCIES:
+  - NSLocation (from `../`)
+
+EXTERNAL SOURCES:
+  NSLocation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NSLocation: 340b315561e0a6941a2c7ebf45ce3694e6ac3991
+
+COCOAPODS: 0.38.2
