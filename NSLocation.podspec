@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = "NSLocation"
   s.module_name  = "NSLocation"
-  s.version      = "0.1.0"
+  s.version      = "0.0.1"
   s.summary      = "No-Sweat/No-Shit Location Service for iOS"
 
   s.description  = <<-DESC
-                    No-Sweat/No-Shit Location Service for iOS
+                    CoreLocation provided by iOS can provide anything but the most trival location service needs. NSLocation is set out to make collecting locations in your iOS app as no-sweat as it should.
                    DESC
 
   s.homepage     = "https://github.com/Rhumbix/NSLocation.git"
