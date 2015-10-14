@@ -67,18 +67,18 @@ public class NSLocation : NSObject, CLLocationManagerDelegate {
             
             if consecutiveAccurateLocations > 10 {
                 locationManager.desiredAccuracy = self.desiredAccuracy
-                NSLog(String(format: "Setting to %@!", self.desiredAccuracy))
+                NSLog(String(format: "Setting to %.0fm!", self.desiredAccuracy))
             }
             
             if consecutiveInaccurateLocations > 10 {
                 locationManager.desiredAccuracy = self.bestAccuracy
-                NSLog(String(format: "Setting to %@!", self.bestAccuracy))
+                NSLog(String(format: "Setting to %.0fm!", self.bestAccuracy))
             }
         }
     }
     
     func timesUp() {
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        NSLog(String(format: "Setting to %@!", self.bestAccuracy))
+        locationManager.desiredAccuracy = self.bestAccuracy
+        NSLog(String(format: "Setting to %.0fm!", self.bestAccuracy))
     }
 }
