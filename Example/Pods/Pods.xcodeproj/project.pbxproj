@@ -22,6 +22,8 @@
 		88D35BFD882D884A95BF32F0DF11FAB1 /* SimpleHttpForwarder.h in Headers */ = {isa = PBXBuildFile; fileRef = FADA36677F1F8DDDAE22CC591D999CF7 /* SimpleHttpForwarder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96D734FA1AAADFA15CEC50A0D088EAFA /* TeleportUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = D5167755A4F10A937170F2AE7EAE2B05 /* TeleportUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9BCDEF82546FB4A9FBDE663E66271456 /* NSLocation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD7AADC9A4D527B27D0F1898A0D25C9 /* NSLocation-dummy.m */; };
+		9F1DAE9F1BD6BEC000C5617E /* NSLocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1DAE9E1BD6BEC000C5617E /* NSLocationPicker.swift */; settings = {ASSET_TAGS = (); }; };
+		9F1DAEA01BD6BEC000C5617E /* NSLocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1DAE9E1BD6BEC000C5617E /* NSLocationPicker.swift */; settings = {ASSET_TAGS = (); }; };
 		B57283BBC38C361B612FE45590ECBC39 /* LogRotator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB93AB3754A9CB5622B52F16DD3B763 /* LogRotator.m */; };
 		B976CDAA01544620D5EFC9883B25E4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B379A8B4B8B3B0D4EE10F6F91A8EFF3A /* Foundation.framework */; };
 		BC3B1DB6A5511AE180405EB6AEAEB73C /* NSLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF60F7D0B3E870CEE76D1FB68CBD8069 /* NSLocation.swift */; };
@@ -81,6 +83,7 @@
 		8FA8655EE98F658802F9E7A8A06AB965 /* LogReaper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LogReaper.m; path = Pod/Classes/LogReaper.m; sourceTree = "<group>"; };
 		8FD7AADC9A4D527B27D0F1898A0D25C9 /* NSLocation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSLocation-dummy.m"; sourceTree = "<group>"; };
 		91D9DBB8EEAF035CB7D1121FEC6687C5 /* Pods-NSLocationExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NSLocationExample.debug.xcconfig"; sourceTree = "<group>"; };
+		9F1DAE9E1BD6BEC000C5617E /* NSLocationPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocationPicker.swift; sourceTree = "<group>"; };
 		A2D285242F055C232E4C0EF57296C6DF /* Teleport-NSLog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Teleport-NSLog.xcconfig"; sourceTree = "<group>"; };
 		AC7A4769F69D80F407247AD134B34C70 /* Teleport-NSLog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Teleport-NSLog-umbrella.h"; sourceTree = "<group>"; };
 		B1C3B536BEA89F2F43B350DDB0850124 /* Teleport-NSLog-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Teleport-NSLog-Private.xcconfig"; sourceTree = "<group>"; };
@@ -237,6 +240,7 @@
 			children = (
 				B4C780D8B0DA08E41FD071327E82C1A1 /* NSLocation.h */,
 				EF60F7D0B3E870CEE76D1FB68CBD8069 /* NSLocation.swift */,
+				9F1DAE9E1BD6BEC000C5617E /* NSLocationPicker.swift */,
 			);
 			path = NSLocation;
 			sourceTree = "<group>";
@@ -460,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F1DAE9F1BD6BEC000C5617E /* NSLocationPicker.swift in Sources */,
 				9BCDEF82546FB4A9FBDE663E66271456 /* NSLocation-dummy.m in Sources */,
 				BC3B1DB6A5511AE180405EB6AEAEB73C /* NSLocation.swift in Sources */,
 			);
@@ -477,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E3E0210C23624C790C364EF4582E6EA /* Pods-NSLocationExample-dummy.m in Sources */,
+				9F1DAEA01BD6BEC000C5617E /* NSLocationPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 91D9DBB8EEAF035CB7D1121FEC6687C5 /* Pods-NSLocationExample.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -671,6 +678,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0527542080FB23D850586FCD45BD6C5F /* Pods-NSLocationExample.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

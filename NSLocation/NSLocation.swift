@@ -9,14 +9,14 @@ public class NSLocation : NSObject, CLLocationManagerDelegate {
 
     let startingAccuracy : CLLocationAccuracy
     let desiredAccuracy : CLLocationAccuracy
-    let desiredIntervalInSeconds : Double
-    
-    var consecutiveInaccurateLocations = 0
+    let desiredInterval : NSTimeInterval
     
     var intervalTimer : NSTimer?    //The timer for collecting locations at desired interval
     
     var updating : Bool = false  // CLLocationManager doesn't allow us to inquery if it's is still updating location, we need to use a boolean to track this state
     var updatingTimer : NSTimer?    // The timer to make sure CLLocationManager won't "forget about us", espcially when desiredAccuracy is too low
+
+    var locationPicker : NSLocationPicker?
 
     lazy var locationManager: CLLocationManager! = {
         let manager = CLLocationManager()
@@ -25,10 +25,10 @@ public class NSLocation : NSObject, CLLocationManagerDelegate {
         return manager
         }()
     
-    public init(desiredAccuracy: CLLocationAccuracy, desiredIntervalInSeconds: Double) {
+    public init(desiredAccuracy: CLLocationAccuracy, desiredInterval: NSTimeInterval) {
         self.desiredAccuracy = desiredAccuracy
         self.startingAccuracy = desiredAccuracy * 3.0
-        self.desiredIntervalInSeconds = desiredIntervalInSeconds
+        self.desiredInterval = desiredInterval
 
         super.init()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("reinstateBackgroundTask"), name: UIApplicationDidBecomeActiveNotification, object: nil)
@@ -60,7 +60,7 @@ public class NSLocation : NSObject, CLLocationManagerDelegate {
             self.intervalTimer!.invalidate()
             self.intervalTimer = nil
         }
-        self.intervalTimer = NSTimer.scheduledTimerWithTimeInterval(self.desiredIntervalInSeconds, target: self, selector: "getNextLocation", userInfo: nil, repeats: true)
+        self.intervalTimer = NSTimer.scheduledTimerWithTimeInterval(self.desiredInterval, target: self, selector: "getNextLocation", userInfo: nil, repeats: true)
         getNextLocation()
     }
     
@@ -71,8 +71,11 @@ public class NSLocation : NSObject, CLLocationManagerDelegate {
         }
 
         NSLog("Start collecting next location")
+        
+        self.locationPicker = NSLocationPicker(maximumSamples: 10, desiredAccuracy: self.desiredAccuracy, longestInterval: self.desiredInterval)
+        
         self.locationManager.desiredAccuracy = self.startingAccuracy
-        NSLog(String(format: "Setting to %.0fm!", self.startingAccuracy))
+        NSLog(String(format: "Setting accuracy to %.0fm!", self.startingAccuracy))
         self.updating = true
         self.locationManager.startUpdatingLocation()
     }
@@ -91,49 +94,42 @@ public class NSLocation : NSObject, CLLocationManagerDelegate {
             }
 
         }
+        
+        if self.updatingTimer != nil {
+            self.updatingTimer!.invalidate()
+            self.updatingTimer = nil
+        }
 
         for location in locations {
-            NSLog(String(format: "%@", location))
+            NSLog(String(format: "updating: %@ --- location: %@", self.updating, location))
 
-            if NSDate().timeIntervalSinceDate(location.timestamp) > self.desiredIntervalInSeconds {
-                NSLog(String(format: "Throwing away outdated location: %@", location.timestamp))
-                continue
-            }
-
-            if self.updatingTimer != nil {
-                self.updatingTimer!.invalidate()
-                self.updatingTimer = nil
-            }
-            
-            if location.horizontalAccuracy > self.desiredAccuracy {
-                consecutiveInaccurateLocations += 1
-                
-                self.updatingTimer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "hasNotUpdatedLocationForTooLong", userInfo: nil, repeats: false)
-                
-            } else {
-                consecutiveInaccurateLocations = 0
+            if let unwrappedLocation = self.locationPicker!.pick(location) {
 
                 if let unwrappedDelegate = self.delegate {
-                    unwrappedDelegate.locationManager!(self.locationManager, didUpdateLocations: [location])
-                    
-                    if self.updating {
-                        NSLog("Desired location found! Stopping updating location")
-                        self.locationManager.stopUpdatingLocation()
-                        self.updating = false
-                    }
+                    NSLog("Desired location found! Stopping updating location")
+                    unwrappedDelegate.locationManager!(self.locationManager, didUpdateLocations: [unwrappedLocation])
+                    self.locationManager.stopUpdatingLocation()
+                    self.updating = false
                 }
-            }
 
-            if consecutiveInaccurateLocations > 5 {
-                locationManager.desiredAccuracy = self.desiredAccuracy
-                NSLog(String(format: "Setting to %.0fm!", self.desiredAccuracy))
+            } else {
+
+                if self.updating {
+                    locationManager.desiredAccuracy = self.desiredAccuracy
+                    NSLog(String(format: "Setting accuracy to %.0fm!", self.desiredAccuracy))
+                    self.updatingTimer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "hasNotUpdatedLocationForTooLong", userInfo: nil, repeats: false)
+                }
+
             }
         }
     }
     
     func hasNotUpdatedLocationForTooLong() {
+        if !self.updating {
+            return
+        }
         locationManager.desiredAccuracy = self.desiredAccuracy
-        NSLog(String(format: "Times up waiting for didUpdatingLocation. Setting to %.0fm!", self.desiredAccuracy))
+        NSLog(String(format: "Times up waiting for didUpdatingLocation. Setting accuracy to %.0fm!", self.desiredAccuracy))
     }
     
     
