@@ -2,7 +2,6 @@ import UIKit
 import CoreLocation
 
 public class NSLocation : NSObject, CLLocationManagerDelegate {
-    
     var delegate : CLLocationManagerDelegate?  // We will call this delegate when we found location update that satisfies the requirements
     
     var backgroundTask: UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
@@ -16,6 +15,7 @@ public class NSLocation : NSObject, CLLocationManagerDelegate {
     var updating : Bool = false  // CLLocationManager doesn't allow us to inquery if it's is still updating location, we need to use a boolean to track this state
     var updatingTimer : NSTimer?    // The timer to make sure CLLocationManager won't "forget about us", espcially when desiredAccuracy is too low
 
+    
     var locationPicker : NSLocationPicker?
 
     lazy var locationManager: CLLocationManager! = {
@@ -44,12 +44,15 @@ public class NSLocation : NSObject, CLLocationManagerDelegate {
             return
         }
         self.delegate = delegate
-        
+        self.locationManager.startMonitoringSignificantLocationChanges()
+
         self.resetintervalTimer()
     }
     
     public func stop() {
         self.locationManager.stopUpdatingLocation()
+        self.locationManager.stopMonitoringSignificantLocationChanges()
+        self.endBackgroundTask()
         self.updating = false
         self.delegate = nil
     }
@@ -106,10 +109,12 @@ public class NSLocation : NSObject, CLLocationManagerDelegate {
             if let unwrappedLocation = self.locationPicker!.pick(location) {
 
                 if let unwrappedDelegate = self.delegate {
-                    NSLog("Desired location found! Stopping updating location")
-                    unwrappedDelegate.locationManager!(self.locationManager, didUpdateLocations: [unwrappedLocation])
-                    self.locationManager.stopUpdatingLocation()
-                    self.updating = false
+                    if self.updating {
+                        NSLog("Desired location found! Stopping updating location")
+                        unwrappedDelegate.locationManager!(self.locationManager, didUpdateLocations: [unwrappedLocation])
+                        self.locationManager.stopUpdatingLocation()
+                        self.updating = false
+                    }
                 }
 
             } else {
@@ -138,19 +143,36 @@ public class NSLocation : NSObject, CLLocationManagerDelegate {
     func registerBackgroundTask() {
         backgroundTask = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler {
             [unowned self] in
-
-            NSLog("Expiration handler called. Time remaining: %f", UIApplication.sharedApplication().backgroundTimeRemaining)
-
-            if self.delegate != nil {
-                NSLog("Restart updating location so that at least 1 didUpdateLocation call is guarantted")
-                self.locationManager.stopUpdatingLocation()
-                self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-                self.locationManager.startUpdatingLocation()
-            }
-            self.endBackgroundTask()
+            NSLog("Expiration handler called! Time remaining: %f", UIApplication.sharedApplication().backgroundTimeRemaining)
         }
-        NSLog(String(format:"Background task %ld started!", backgroundTask))
         assert(backgroundTask != UIBackgroundTaskInvalid)
+        NSLog(String(format:"Background task %ld started!", backgroundTask))
+
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
+            while true {
+                let timeRemaining = UIApplication.sharedApplication().backgroundTimeRemaining
+                NSLog(String(format:"backgroundTimeRemaining: %f", timeRemaining))
+                if timeRemaining < 30.0 {
+                    self.backgroundTaskAboutToExpire()
+                    return
+                }
+                sleep(5)
+            }
+        }
+    }
+
+    func backgroundTaskAboutToExpire() {
+        NSLog("backgroundTaskAboutToExpire called. Time remaining: %f", UIApplication.sharedApplication().backgroundTimeRemaining)
+        
+        if self.delegate != nil {
+            NSLog("Restart updating location so that at least 1 didUpdateLocation call is guarantted")
+            if self.updating {
+                self.locationManager.stopUpdatingLocation()
+            }
+            self.locationManager.startUpdatingLocation()
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        }
+        self.endBackgroundTask()
     }
     
     func endBackgroundTask() {
