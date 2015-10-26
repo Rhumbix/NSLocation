@@ -115,6 +115,7 @@ public class NSLocation : NSObject, CLLocationManagerDelegate {
                         self.locationManager.stopUpdatingLocation()
                         self.updating = false
                     }
+                }
 
             } else {
 
