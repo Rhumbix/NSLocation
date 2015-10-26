@@ -7,65 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CC85A13E920EBB79E3D9BE5090BCB77 /* NSLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = B4C780D8B0DA08E41FD071327E82C1A1 /* NSLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B0EE7A8E68221B9242B7AD7AC31468F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B379A8B4B8B3B0D4EE10F6F91A8EFF3A /* Foundation.framework */; };
 		0E3E0210C23624C790C364EF4582E6EA /* Pods-NSLocationExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 711FAD93C28FAB02631DBD7EEA3C22BB /* Pods-NSLocationExample-dummy.m */; };
 		1A03A89AFC8BAEEB3DD9D25B028589B5 /* LogRotator.h in Headers */ = {isa = PBXBuildFile; fileRef = 50552C4A3B24FC6F77847C3111C366C8 /* LogRotator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2219ABD3D30778FCBFA0CD90700935DD /* NSLocation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1E6DC2D60DF28B0BCFD257045B9AE3 /* NSLocation-dummy.m */; };
 		250253987E581073A91C36E59A71A6A6 /* Teleport.h in Headers */ = {isa = PBXBuildFile; fileRef = F3113294D5561DC0C343B8168A23DB5B /* Teleport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CDEE1267D3BB1BA57E49A1D488B42C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B379A8B4B8B3B0D4EE10F6F91A8EFF3A /* Foundation.framework */; };
 		4B8709BAC8EF9EF2CBB3445AB39849DA /* Pods-NSLocationExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB2473AA1C5233C84CAFD4231F13C4FD /* Pods-NSLocationExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F0F3B52D1B8F805D1E9BAC88EC8FDDD /* NSLocation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 312D56E63FEEC6DDD03AF8B769CA112A /* NSLocation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		550802F4D990CA0C8055E0C4ADDA3D7D /* Teleport.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CA96317C6F9A1B9DFE879E7649327A2A /* Teleport.bundle */; };
 		5978A36A6AB2FEDB2AAC31CE10DE4012 /* SimpleHttpForwarder.m in Sources */ = {isa = PBXBuildFile; fileRef = 68619214B094B83D8B2B0E374F87054D /* SimpleHttpForwarder.m */; };
 		5D77702B9B61406DADDB1ECA351A719F /* Teleport-NSLog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7A4769F69D80F407247AD134B34C70 /* Teleport-NSLog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7615D53BFEBB6B3370CA6EE6E2E705FC /* NSLocation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0167165681C4F83C5096DB49303D7771 /* NSLocation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D934E2656B9C61F2D3B676A9F90902C /* Singleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 243EF2CD36F294251383B37C79B39DC6 /* Singleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		833FF5E1591EFF3245E1B1132F796940 /* Teleport.m in Sources */ = {isa = PBXBuildFile; fileRef = 468016B43ED5A69F3572A310E94CDCC2 /* Teleport.m */; };
 		88D35BFD882D884A95BF32F0DF11FAB1 /* SimpleHttpForwarder.h in Headers */ = {isa = PBXBuildFile; fileRef = FADA36677F1F8DDDAE22CC591D999CF7 /* SimpleHttpForwarder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96D734FA1AAADFA15CEC50A0D088EAFA /* TeleportUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = D5167755A4F10A937170F2AE7EAE2B05 /* TeleportUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BCDEF82546FB4A9FBDE663E66271456 /* NSLocation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD7AADC9A4D527B27D0F1898A0D25C9 /* NSLocation-dummy.m */; };
-		9F1DAE9F1BD6BEC000C5617E /* NSLocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1DAE9E1BD6BEC000C5617E /* NSLocationPicker.swift */; settings = {ASSET_TAGS = (); }; };
-		9F1DAEA01BD6BEC000C5617E /* NSLocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1DAE9E1BD6BEC000C5617E /* NSLocationPicker.swift */; settings = {ASSET_TAGS = (); }; };
+		9CEF33342B7D9ECCB4893129A8E5FB1F /* NSLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2BF13C9F2A345F4540AB83084380F9 /* NSLocation.swift */; };
+		AB093E2D397A9936958B72F62DC3175A /* NSLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B0907C005A5D0DE11000E3CE54A503 /* NSLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B57283BBC38C361B612FE45590ECBC39 /* LogRotator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB93AB3754A9CB5622B52F16DD3B763 /* LogRotator.m */; };
 		B976CDAA01544620D5EFC9883B25E4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B379A8B4B8B3B0D4EE10F6F91A8EFF3A /* Foundation.framework */; };
-		BC3B1DB6A5511AE180405EB6AEAEB73C /* NSLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF60F7D0B3E870CEE76D1FB68CBD8069 /* NSLocation.swift */; };
+		C931241D3178F1D0BDE5F612EF1452A4 /* NSLocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC2687A00E6BAF55161CF59D56C7B5C /* NSLocationPicker.swift */; };
 		CB70C69AF80FDE5764C7290470E54AFB /* LogReaper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8655EE98F658802F9E7A8A06AB965 /* LogReaper.m */; };
-		CF54C48969A65E3DBBF638FC564A59E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B379A8B4B8B3B0D4EE10F6F91A8EFF3A /* Foundation.framework */; };
 		F3FCCE092C9B196CF0F50612B515149C /* Teleport-NSLog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D57DA5AB8DDA390D0FDF989E126E202E /* Teleport-NSLog-dummy.m */; };
 		F48A0AA5065EFE59D99460B379494F10 /* LogReaper.h in Headers */ = {isa = PBXBuildFile; fileRef = 16A81F36B638E27BC102F90BB711676D /* LogReaper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD65C42DE097F065288457FD015E926B /* TeleportUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 464B9CD00E4EE5059BEF4E9617187FC6 /* TeleportUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		92E267753EB6723A49D4A582171471E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1558F869D665FA2CB1CE58AE3F40D8B7;
-			remoteInfo = "Teleport-NSLog-Teleport";
-		};
-		C2F19401A7EC8EABEA60D68ECFFD0AC2 /* PBXContainerItemProxy */ = {
+		6F6EF2001DA2EAEFB2159DB42936A146 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 60D0BC50F222EE0ECFD63B5DBE18BEC4;
 			remoteInfo = "Teleport-NSLog";
 		};
-		E02238913554D61CCE7CAC0170AB0DAE /* PBXContainerItemProxy */ = {
+		9F8C313BDCA3A507340055913782F6C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8C9E173F2FA6637AD2454C04F54498EA;
+			remoteGlobalIDString = 1558F869D665FA2CB1CE58AE3F40D8B7;
+			remoteInfo = "Teleport-NSLog-Teleport";
+		};
+		A3F3404AE7CF7FEA3CD9B8B4EAF9CCE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 643213AFDA917AB9B64831806C144654;
 			remoteInfo = NSLocation;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0167165681C4F83C5096DB49303D7771 /* NSLocation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSLocation-umbrella.h"; sourceTree = "<group>"; };
 		0527542080FB23D850586FCD45BD6C5F /* Pods-NSLocationExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NSLocationExample.release.xcconfig"; sourceTree = "<group>"; };
 		0B1C8FE8190FD634500F14D5516FAC01 /* Pods-NSLocationExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NSLocationExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		11AEEB4C3032AB48D256599EA5780AFC /* NSLocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSLocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		138567630E383BC42B6AB085BB2669EF /* Pods-NSLocationExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NSLocationExample-resources.sh"; sourceTree = "<group>"; };
 		16A81F36B638E27BC102F90BB711676D /* LogReaper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LogReaper.h; path = Pod/Classes/LogReaper.h; sourceTree = "<group>"; };
 		243EF2CD36F294251383B37C79B39DC6 /* Singleton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Singleton.h; path = Pod/Classes/Singleton.h; sourceTree = "<group>"; };
-		349F25B4482D5CC67065FFD839528C5F /* NSLocation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NSLocation.xcconfig; sourceTree = "<group>"; };
+		2FC2687A00E6BAF55161CF59D56C7B5C /* NSLocationPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NSLocationPicker.swift; sourceTree = "<group>"; };
+		312D56E63FEEC6DDD03AF8B769CA112A /* NSLocation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSLocation-umbrella.h"; sourceTree = "<group>"; };
 		3D616A5E568E230ED476E25AAA87F862 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		404B7BA9B9227448A4EBAED8ADF0CE3E /* Pods_NSLocationExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSLocationExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		464B9CD00E4EE5059BEF4E9617187FC6 /* TeleportUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TeleportUtils.m; path = Pod/Classes/TeleportUtils.m; sourceTree = "<group>"; };
@@ -73,34 +73,33 @@
 		50552C4A3B24FC6F77847C3111C366C8 /* LogRotator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LogRotator.h; path = Pod/Classes/LogRotator.h; sourceTree = "<group>"; };
 		54163C02C70D9AF6B5A575CFCB315C74 /* Pods-NSLocationExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NSLocationExample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5BB93AB3754A9CB5622B52F16DD3B763 /* LogRotator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LogRotator.m; path = Pod/Classes/LogRotator.m; sourceTree = "<group>"; };
-		5BC3AF5DE44DE4A434256880CF8BDB66 /* NSLocation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSLocation-prefix.pch"; sourceTree = "<group>"; };
-		5EE8678FD43B7063EBD1CE7C2615754E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68619214B094B83D8B2B0E374F87054D /* SimpleHttpForwarder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SimpleHttpForwarder.m; path = Pod/Classes/Forwarders/SimpleHttpForwarder.m; sourceTree = "<group>"; };
+		6D64ED67B8F113C1A874C4EAAFFB415E /* NSLocation-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NSLocation-Private.xcconfig"; sourceTree = "<group>"; };
 		6EA3D00A3755B2134D375ED08C634A8E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		711FAD93C28FAB02631DBD7EEA3C22BB /* Pods-NSLocationExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NSLocationExample-dummy.m"; sourceTree = "<group>"; };
-		7E389E9A170D20040E2A6D6FAE6A994F /* NSLocation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = NSLocation.modulemap; sourceTree = "<group>"; };
+		77BA255A8B231CC3DD5E842DB54EBDFC /* NSLocation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = NSLocation.modulemap; sourceTree = "<group>"; };
 		8AAE0E64A4C72F4B61A57F4D27BDA9B1 /* Teleport-NSLog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Teleport-NSLog-prefix.pch"; sourceTree = "<group>"; };
+		8B3FAB92844E2D4D2173EF75915EFADA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ECF607372CB7C10977FEFA7E29F1AC1 /* NSLocation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NSLocation.xcconfig; sourceTree = "<group>"; };
 		8FA8655EE98F658802F9E7A8A06AB965 /* LogReaper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LogReaper.m; path = Pod/Classes/LogReaper.m; sourceTree = "<group>"; };
-		8FD7AADC9A4D527B27D0F1898A0D25C9 /* NSLocation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSLocation-dummy.m"; sourceTree = "<group>"; };
 		91D9DBB8EEAF035CB7D1121FEC6687C5 /* Pods-NSLocationExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NSLocationExample.debug.xcconfig"; sourceTree = "<group>"; };
-		9F1DAE9E1BD6BEC000C5617E /* NSLocationPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocationPicker.swift; sourceTree = "<group>"; };
 		A2D285242F055C232E4C0EF57296C6DF /* Teleport-NSLog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Teleport-NSLog.xcconfig"; sourceTree = "<group>"; };
 		AC7A4769F69D80F407247AD134B34C70 /* Teleport-NSLog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Teleport-NSLog-umbrella.h"; sourceTree = "<group>"; };
+		AE2BF13C9F2A345F4540AB83084380F9 /* NSLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NSLocation.swift; sourceTree = "<group>"; };
 		B1C3B536BEA89F2F43B350DDB0850124 /* Teleport-NSLog-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Teleport-NSLog-Private.xcconfig"; sourceTree = "<group>"; };
-		B2A6D29CC004BB2BB5EAA49F0C3B5510 /* NSLocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSLocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B379A8B4B8B3B0D4EE10F6F91A8EFF3A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		B384BC1C6B7F3448D0612EFD6B415CBD /* Teleport-NSLog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Teleport-NSLog.modulemap"; sourceTree = "<group>"; };
-		B4C780D8B0DA08E41FD071327E82C1A1 /* NSLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NSLocation.h; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BB2473AA1C5233C84CAFD4231F13C4FD /* Pods-NSLocationExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NSLocationExample-umbrella.h"; sourceTree = "<group>"; };
+		C0B0907C005A5D0DE11000E3CE54A503 /* NSLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NSLocation.h; sourceTree = "<group>"; };
 		C1ED39BDC87DF81ECB2BA49FFE23F71E /* Teleport_NSLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Teleport_NSLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E1363E19CBC23B9AB73075378234A3 /* Pods-NSLocationExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NSLocationExample.modulemap"; sourceTree = "<group>"; };
 		CA96317C6F9A1B9DFE879E7649327A2A /* Teleport.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Teleport.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5167755A4F10A937170F2AE7EAE2B05 /* TeleportUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TeleportUtils.h; path = Pod/Classes/TeleportUtils.h; sourceTree = "<group>"; };
 		D57DA5AB8DDA390D0FDF989E126E202E /* Teleport-NSLog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Teleport-NSLog-dummy.m"; sourceTree = "<group>"; };
-		EF60F7D0B3E870CEE76D1FB68CBD8069 /* NSLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NSLocation.swift; sourceTree = "<group>"; };
+		DA1E6DC2D60DF28B0BCFD257045B9AE3 /* NSLocation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSLocation-dummy.m"; sourceTree = "<group>"; };
 		F3113294D5561DC0C343B8168A23DB5B /* Teleport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Teleport.h; path = Pod/Classes/Teleport.h; sourceTree = "<group>"; };
-		FAA0FE02188A37B9905AD1536E20A0D9 /* NSLocation-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NSLocation-Private.xcconfig"; sourceTree = "<group>"; };
+		F9361E5298A9FF6EC028136030D673F1 /* NSLocation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSLocation-prefix.pch"; sourceTree = "<group>"; };
 		FADA36677F1F8DDDAE22CC591D999CF7 /* SimpleHttpForwarder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimpleHttpForwarder.h; path = Pod/Classes/Forwarders/SimpleHttpForwarder.h; sourceTree = "<group>"; };
 		FC65110248EE93069C253CF5C7A283B7 /* Pods-NSLocationExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NSLocationExample-frameworks.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,11 +121,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5892D839A83F4DEDCCFD95B85BBF07B2 /* Frameworks */ = {
+		9849D5AB5E08FC1A0994B7C5FC519D7C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF54C48969A65E3DBBF638FC564A59E2 /* Foundation.framework in Frameworks */,
+				0B0EE7A8E68221B9242B7AD7AC31468F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,24 +142,9 @@
 		14F771AC34AED11DC5E55D8CC6CEFE81 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3C0BA4C4DCD9E570D21417DDF449FB59 /* NSLocation */,
+				FB98D5005BE40F128DA92079D0ED5662 /* NSLocation */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		1E6AC1CD70501A938EFD7D0908745045 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5EE8678FD43B7063EBD1CE7C2615754E /* Info.plist */,
-				7E389E9A170D20040E2A6D6FAE6A994F /* NSLocation.modulemap */,
-				349F25B4482D5CC67065FFD839528C5F /* NSLocation.xcconfig */,
-				FAA0FE02188A37B9905AD1536E20A0D9 /* NSLocation-Private.xcconfig */,
-				8FD7AADC9A4D527B27D0F1898A0D25C9 /* NSLocation-dummy.m */,
-				5BC3AF5DE44DE4A434256880CF8BDB66 /* NSLocation-prefix.pch */,
-				0167165681C4F83C5096DB49303D7771 /* NSLocation-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/NSLocation";
 			sourceTree = "<group>";
 		};
 		23E4AA0CD3E94D392B471FCBF11C30C2 /* Pods */ = {
@@ -169,6 +153,21 @@
 				64430025504EAD2AC2599B6BE0AEDBDE /* Teleport-NSLog */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		2FD1971F71277B243AE1F73168B6EF96 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B3FAB92844E2D4D2173EF75915EFADA /* Info.plist */,
+				77BA255A8B231CC3DD5E842DB54EBDFC /* NSLocation.modulemap */,
+				8ECF607372CB7C10977FEFA7E29F1AC1 /* NSLocation.xcconfig */,
+				6D64ED67B8F113C1A874C4EAAFFB415E /* NSLocation-Private.xcconfig */,
+				DA1E6DC2D60DF28B0BCFD257045B9AE3 /* NSLocation-dummy.m */,
+				F9361E5298A9FF6EC028136030D673F1 /* NSLocation-prefix.pch */,
+				312D56E63FEEC6DDD03AF8B769CA112A /* NSLocation-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/NSLocation";
 			sourceTree = "<group>";
 		};
 		3B26CCE25C78679096F4EDD8A44F8B20 /* Support Files */ = {
@@ -184,16 +183,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Teleport-NSLog";
-			sourceTree = "<group>";
-		};
-		3C0BA4C4DCD9E570D21417DDF449FB59 /* NSLocation */ = {
-			isa = PBXGroup;
-			children = (
-				A659E3310F8AC1EC9A320D5E28EE75EA /* NSLocation */,
-				1E6AC1CD70501A938EFD7D0908745045 /* Support Files */,
-			);
-			name = NSLocation;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
@@ -235,16 +224,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		A659E3310F8AC1EC9A320D5E28EE75EA /* NSLocation */ = {
-			isa = PBXGroup;
-			children = (
-				B4C780D8B0DA08E41FD071327E82C1A1 /* NSLocation.h */,
-				EF60F7D0B3E870CEE76D1FB68CBD8069 /* NSLocation.swift */,
-				9F1DAE9E1BD6BEC000C5617E /* NSLocationPicker.swift */,
-			);
-			path = NSLocation;
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,7 +235,7 @@
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B2A6D29CC004BB2BB5EAA49F0C3B5510 /* NSLocation.framework */,
+				11AEEB4C3032AB48D256599EA5780AFC /* NSLocation.framework */,
 				404B7BA9B9227448A4EBAED8ADF0CE3E /* Pods_NSLocationExample.framework */,
 				CA96317C6F9A1B9DFE879E7649327A2A /* Teleport.bundle */,
 				C1ED39BDC87DF81ECB2BA49FFE23F71E /* Teleport_NSLog.framework */,
@@ -270,6 +249,26 @@
 				FF2D360872A9A0A7FEA58419E9C01A54 /* Pods-NSLocationExample */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		EC5E736DB70AF12E0120A4C97410F19F /* NSLocation */ = {
+			isa = PBXGroup;
+			children = (
+				C0B0907C005A5D0DE11000E3CE54A503 /* NSLocation.h */,
+				AE2BF13C9F2A345F4540AB83084380F9 /* NSLocation.swift */,
+				2FC2687A00E6BAF55161CF59D56C7B5C /* NSLocationPicker.swift */,
+			);
+			path = NSLocation;
+			sourceTree = "<group>";
+		};
+		FB98D5005BE40F128DA92079D0ED5662 /* NSLocation */ = {
+			isa = PBXGroup;
+			children = (
+				EC5E736DB70AF12E0120A4C97410F19F /* NSLocation */,
+				2FD1971F71277B243AE1F73168B6EF96 /* Support Files */,
+			);
+			name = NSLocation;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		FF2D360872A9A0A7FEA58419E9C01A54 /* Pods-NSLocationExample */ = {
@@ -315,12 +314,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A173976A1CA0FB95CD7A1C338C207DAD /* Headers */ = {
+		F44D789A1CFA432F18D2925609194F04 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7615D53BFEBB6B3370CA6EE6E2E705FC /* NSLocation-umbrella.h in Headers */,
-				0CC85A13E920EBB79E3D9BE5090BCB77 /* NSLocation.h in Headers */,
+				4F0F3B52D1B8F805D1E9BAC88EC8FDDD /* NSLocation-umbrella.h in Headers */,
+				AB093E2D397A9936958B72F62DC3175A /* NSLocation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,8 +354,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				ECFF3FF3838713C9DDB0B51216BDE113 /* PBXTargetDependency */,
-				CB177130BE941659E8D7BE4A229DE1C7 /* PBXTargetDependency */,
+				EFEC5B3035126AD124F8E8DF37B57F1C /* PBXTargetDependency */,
+				7C42EE7DADDBC90968F64E321BBDBD83 /* PBXTargetDependency */,
 			);
 			name = "Pods-NSLocationExample";
 			productName = "Pods-NSLocationExample";
@@ -375,20 +374,20 @@
 			buildRules = (
 			);
 			dependencies = (
-				83AD2B65E85881D9310FD34B19E696C4 /* PBXTargetDependency */,
+				84B12067251101F3A4F4807D731B734A /* PBXTargetDependency */,
 			);
 			name = "Teleport-NSLog";
 			productName = "Teleport-NSLog";
 			productReference = C1ED39BDC87DF81ECB2BA49FFE23F71E /* Teleport_NSLog.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8C9E173F2FA6637AD2454C04F54498EA /* NSLocation */ = {
+		643213AFDA917AB9B64831806C144654 /* NSLocation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C8B736F82E0BFCADA658D1C3EF751EC /* Build configuration list for PBXNativeTarget "NSLocation" */;
+			buildConfigurationList = CAA5661C8CC4AA82F3ECDDA9A744B7C2 /* Build configuration list for PBXNativeTarget "NSLocation" */;
 			buildPhases = (
-				504DEF4D4971B67008E2B858E5472C57 /* Sources */,
-				5892D839A83F4DEDCCFD95B85BBF07B2 /* Frameworks */,
-				A173976A1CA0FB95CD7A1C338C207DAD /* Headers */,
+				297E2E53429FA67A4ABB667542402EAE /* Sources */,
+				9849D5AB5E08FC1A0994B7C5FC519D7C /* Frameworks */,
+				F44D789A1CFA432F18D2925609194F04 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -396,7 +395,7 @@
 			);
 			name = NSLocation;
 			productName = NSLocation;
-			productReference = B2A6D29CC004BB2BB5EAA49F0C3B5510 /* NSLocation.framework */;
+			productReference = 11AEEB4C3032AB48D256599EA5780AFC /* NSLocation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -420,7 +419,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8C9E173F2FA6637AD2454C04F54498EA /* NSLocation */,
+				643213AFDA917AB9B64831806C144654 /* NSLocation */,
 				5A0AED078CDE0E1698AF90C803B433B6 /* Pods-NSLocationExample */,
 				60D0BC50F222EE0ECFD63B5DBE18BEC4 /* Teleport-NSLog */,
 				1558F869D665FA2CB1CE58AE3F40D8B7 /* Teleport-NSLog-Teleport */,
@@ -460,13 +459,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		504DEF4D4971B67008E2B858E5472C57 /* Sources */ = {
+		297E2E53429FA67A4ABB667542402EAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F1DAE9F1BD6BEC000C5617E /* NSLocationPicker.swift in Sources */,
-				9BCDEF82546FB4A9FBDE663E66271456 /* NSLocation-dummy.m in Sources */,
-				BC3B1DB6A5511AE180405EB6AEAEB73C /* NSLocation.swift in Sources */,
+				2219ABD3D30778FCBFA0CD90700935DD /* NSLocation-dummy.m in Sources */,
+				9CEF33342B7D9ECCB4893129A8E5FB1F /* NSLocation.swift in Sources */,
+				C931241D3178F1D0BDE5F612EF1452A4 /* NSLocationPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,30 +481,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E3E0210C23624C790C364EF4582E6EA /* Pods-NSLocationExample-dummy.m in Sources */,
-				9F1DAEA01BD6BEC000C5617E /* NSLocationPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		83AD2B65E85881D9310FD34B19E696C4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Teleport-NSLog-Teleport";
-			target = 1558F869D665FA2CB1CE58AE3F40D8B7 /* Teleport-NSLog-Teleport */;
-			targetProxy = 92E267753EB6723A49D4A582171471E2 /* PBXContainerItemProxy */;
-		};
-		CB177130BE941659E8D7BE4A229DE1C7 /* PBXTargetDependency */ = {
+		7C42EE7DADDBC90968F64E321BBDBD83 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Teleport-NSLog";
 			target = 60D0BC50F222EE0ECFD63B5DBE18BEC4 /* Teleport-NSLog */;
-			targetProxy = C2F19401A7EC8EABEA60D68ECFFD0AC2 /* PBXContainerItemProxy */;
+			targetProxy = 6F6EF2001DA2EAEFB2159DB42936A146 /* PBXContainerItemProxy */;
 		};
-		ECFF3FF3838713C9DDB0B51216BDE113 /* PBXTargetDependency */ = {
+		84B12067251101F3A4F4807D731B734A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Teleport-NSLog-Teleport";
+			target = 1558F869D665FA2CB1CE58AE3F40D8B7 /* Teleport-NSLog-Teleport */;
+			targetProxy = 9F8C313BDCA3A507340055913782F6C4 /* PBXContainerItemProxy */;
+		};
+		EFEC5B3035126AD124F8E8DF37B57F1C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = NSLocation;
-			target = 8C9E173F2FA6637AD2454C04F54498EA /* NSLocation */;
-			targetProxy = E02238913554D61CCE7CAC0170AB0DAE /* PBXContainerItemProxy */;
+			target = 643213AFDA917AB9B64831806C144654 /* NSLocation */;
+			targetProxy = A3F3404AE7CF7FEA3CD9B8B4EAF9CCE2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -553,7 +551,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 91D9DBB8EEAF035CB7D1121FEC6687C5 /* Pods-NSLocationExample.debug.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -580,14 +577,14 @@
 			};
 			name = Debug;
 		};
-		937EE4709C9C13D73C6DB978FD19D252 /* Debug */ = {
+		7CC3F45124C5C4A0538C88100267C473 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAA0FE02188A37B9905AD1536E20A0D9 /* NSLocation-Private.xcconfig */;
+			baseConfigurationReference = 6D64ED67B8F113C1A874C4EAAFFB415E /* NSLocation-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.2.0;
+				CURRENT_PROJECT_VERSION = 0.1.2;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.2.0;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.2;
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -597,16 +594,15 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/NSLocation/NSLocation.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = NSLocation;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -647,38 +643,10 @@
 			};
 			name = Debug;
 		};
-		AF05C87644C4ABE3F98B6C3991725141 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAA0FE02188A37B9905AD1536E20A0D9 /* NSLocation-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.2.0;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.2.0;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/NSLocation/NSLocation-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NSLocation/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/NSLocation/NSLocation.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = NSLocation;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		B6B5F92789E4C9ED97FB1B73F3CC6380 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0527542080FB23D850586FCD45BD6C5F /* Pods-NSLocationExample.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -703,6 +671,34 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		BC105D7FA7243740239739F8708B481D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D64ED67B8F113C1A874C4EAAFFB415E /* NSLocation-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.2;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.2;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/NSLocation/NSLocation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NSLocation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NSLocation/NSLocation.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = NSLocation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		C9B04C7E225B7FE91380CAC5714CC3C8 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -798,20 +794,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C8B736F82E0BFCADA658D1C3EF751EC /* Build configuration list for PBXNativeTarget "NSLocation" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				937EE4709C9C13D73C6DB978FD19D252 /* Debug */,
-				AF05C87644C4ABE3F98B6C3991725141 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		ACE03E2A9E4D27FFDC591B31DCA8A93C /* Build configuration list for PBXNativeTarget "Pods-NSLocationExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6CEBCA5125E27D0859D702936FAB4A3F /* Debug */,
 				B6B5F92789E4C9ED97FB1B73F3CC6380 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAA5661C8CC4AA82F3ECDDA9A744B7C2 /* Build configuration list for PBXNativeTarget "NSLocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC105D7FA7243740239739F8708B481D /* Debug */,
+				7CC3F45124C5C4A0538C88100267C473 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

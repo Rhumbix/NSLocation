@@ -25,10 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         {
             for viewController in viewControllers {
                 if let fetchViewController = viewController as? FetchViewController {
-                    fetchViewController.fetch {
-                        fetchViewController.updateUI()
-                        completionHandler(.NewData)
-                    }
+                    fetchViewController.fetch()
                 }
             }
         }

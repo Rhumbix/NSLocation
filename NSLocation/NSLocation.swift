@@ -97,15 +97,15 @@ public class NSLocation : NSObject, CLLocationManagerDelegate {
             }
 
         }
-        
-        if self.updatingTimer != nil {
-            self.updatingTimer!.invalidate()
-            self.updatingTimer = nil
-        }
 
         for location in locations {
             NSLog(String(format: "updating: %@ --- location: %@", self.updating, location))
 
+            if self.updatingTimer != nil {
+                self.updatingTimer!.invalidate()
+                self.updatingTimer = nil
+            }
+            
             if let unwrappedLocation = self.locationPicker!.pick(location) {
 
                 if let unwrappedDelegate = self.delegate {

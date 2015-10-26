@@ -9,21 +9,21 @@
 import Foundation
 import CoreLocation
 
-class NSLocationPicker {
+public class NSLocationPicker {
     let maximumSamples : Int
     let desiredAccuracy : CLLocationAccuracy
     let longestInterval : NSTimeInterval
     
     var locations : [CLLocation]
     
-    init(maximumSamples: Int, desiredAccuracy: CLLocationAccuracy, longestInterval: NSTimeInterval) {
+    public init(maximumSamples: Int, desiredAccuracy: CLLocationAccuracy, longestInterval: NSTimeInterval) {
         self.maximumSamples = maximumSamples
         self.desiredAccuracy = desiredAccuracy
         self.longestInterval = longestInterval
         self.locations = []
     }
     
-    func pick(newLocation: CLLocation) -> CLLocation? {
+    public func pick(newLocation: CLLocation) -> CLLocation? {
         if NSDate().timeIntervalSinceDate(newLocation.timestamp) > self.longestInterval {
             return nil
         }

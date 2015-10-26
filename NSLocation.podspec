@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "NSLocation"
   s.module_name  = "NSLocation"
-  s.version      = "0.1.2"
+  s.version      = "0.1.3"
   s.summary      = "No-Sweat/No-Shit Location Service for iOS"
 
   s.description  = <<-DESC

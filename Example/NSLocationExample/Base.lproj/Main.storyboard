@@ -156,33 +156,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Co-Ga-kx4">
-                                <rect key="frame" x="111" y="114" width="99" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOP-4v-iU7">
-                                <rect key="frame" x="135" y="207" width="51" height="30"/>
-                                <state key="normal" title="Update">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dw5-HA-uAx">
+                                <rect key="frame" x="20" y="28" width="51" height="31"/>
                                 <connections>
-                                    <action selector="didTapUpdate:" destination="EYY-Ac-VYj" eventType="touchUpInside" id="3Nz-Zg-Xwg"/>
+                                    <action selector="enabledChanged:" destination="EYY-Ac-VYj" eventType="valueChanged" id="JoB-b4-qIq"/>
+                                    <action selector="enabledChanged:" destination="9pv-A4-QxB" eventType="valueChanged" id="aEQ-fg-buj"/>
                                 </connections>
-                            </button>
+                            </switch>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cS3-Qb-fGg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="5Co-Ga-kx4" firstAttribute="top" secondItem="vOP-4v-iU7" secondAttribute="bottom" constant="-123" id="Jz7-cO-b3v"/>
-                            <constraint firstItem="vOP-4v-iU7" firstAttribute="top" secondItem="mWj-e7-p7p" secondAttribute="bottom" constant="187" id="Rp7-5V-KjW"/>
-                            <constraint firstItem="vOP-4v-iU7" firstAttribute="centerX" secondItem="5Co-Ga-kx4" secondAttribute="centerX" id="XQm-NY-w0S"/>
-                            <constraint firstAttribute="centerX" secondItem="vOP-4v-iU7" secondAttribute="centerX" constant="-0.5" id="wWI-lK-Vo7"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Fetch" image="second" id="YQv-zT-9b7"/>
                     <connections>
-                        <outlet property="updateLabel" destination="5Co-Ga-kx4" id="pUs-6O-7Ve"/>
+                        <outlet property="mapView" destination="cS3-Qb-fGg" id="O70-QT-wIL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X1K-OZ-RKh" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -7,35 +7,101 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
+import NSLocation
 
-class FetchViewController: UIViewController {
-  
-  @IBOutlet weak var updateLabel: UILabel?
-  var time: NSDate?
-  
-  func fetch(completion: () -> Void) {
-    time = NSDate()
-    completion()
-  }
-  
-  func updateUI() {
-    if let time = time {
-      let formatter = NSDateFormatter()
-      formatter.dateStyle = .ShortStyle
-      formatter.timeStyle = .LongStyle
-      updateLabel?.text = formatter.stringFromDate(time)
+class FetchViewController: UIViewController, CLLocationManagerDelegate {
+
+    @IBOutlet weak var mapView: MKMapView!
+    
+    var locationPicker : NSLocationPicker?
+    
+    var updatingTimer : NSTimer?    // The timer to make sure CLLocationManager won't "forget about us", espcially when desiredAccuracy is too low
+
+    var updating = false
+    
+    lazy var locationManager: CLLocationManager! = {
+        let manager = CLLocationManager()
+        manager.delegate = self
+        manager.requestAlwaysAuthorization()
+        return manager
+        }()
+    
+    @IBAction func enabledChanged(sender: UISwitch) {
+        if sender.on {
+            self.start()
+        } else {
+            self.stop()
+        }
     }
-    else {
-      updateLabel?.text = "Not yet updated"
+    
+    // MARK: - CLLocationManagerDelegate
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        for location in locations {
+            NSLog(String(format: "updating: %@ --- location: %@", self.updating, location))
+            
+            if self.updatingTimer != nil {
+                self.updatingTimer!.invalidate()
+                self.updatingTimer = nil
+            }
+
+            if let unwrappedLocation = self.locationPicker!.pick(location) {
+                
+                if self.updating {
+                    self.mapView.addAnnotations(locations.map
+                        { (loc: CLLocation) -> MKPointAnnotation in
+                            let anno = MKPointAnnotation()
+                            anno.coordinate = loc.coordinate
+                            return anno
+                        }
+                    )
+                        self.locationManager.stopUpdatingLocation()
+                }
+                    
+            } else {
+                    
+                    if self.updating {
+                        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+                        NSLog(String(format: "Setting accuracy to %.0fm!", kCLLocationAccuracyNearestTenMeters))
+                        self.updatingTimer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "hasNotUpdatedLocationForTooLong", userInfo: nil, repeats: false)
+                    }
+                    
+                }
+            }
+        }
+    
+    func hasNotUpdatedLocationForTooLong() {
+        if !self.updating {
+            return
+        }
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        NSLog(String(format: "Times up waiting for didUpdatingLocation. Setting accuracy to %.0fm!", kCLLocationAccuracyNearestTenMeters))
     }
-  }
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    updateUI()
+    func fetch() {
+        NSLog("Fetch is called")
+    self.start()
   }
-  
-  @IBAction func didTapUpdate(sender: UIButton) {
-    fetch { self.updateUI() }
-  }
+    
+    func start() {
+        if self.updating {
+            return
+        }
+        
+        self.updating = true
+        self.locationPicker = NSLocationPicker(maximumSamples: 10, desiredAccuracy: kCLLocationAccuracyNearestTenMeters, longestInterval: 120)
+        
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        NSLog(String(format: "Setting accuracy to %.0fm!", kCLLocationAccuracyHundredMeters))
+        self.locationManager.startUpdatingLocation()
+    }
+    
+    func stop() {
+            self.locationManager.stopUpdatingHeading()
+        self.updating = false
+    }
+
 }

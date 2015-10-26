@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2B5F787AE18C067F898B32A7"
+               BlueprintIdentifier = "205237C69E3B90F369695E3B"
                BuildableName = "NSLocation.framework"
                BlueprintName = "NSLocation"
                ReferencedContainer = "container:Pods.xcodeproj">
