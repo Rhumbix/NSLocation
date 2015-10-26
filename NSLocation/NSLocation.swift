@@ -105,9 +105,9 @@ public class NSLocation : NSObject, CLLocationManagerDelegate {
 
         for location in locations {
             NSLog(String(format: "updating: %@ --- location: %@", self.updating, location))
-
+            
             if let unwrappedLocation = self.locationPicker!.pick(location) {
-
+                
                 if let unwrappedDelegate = self.delegate {
                     if self.updating {
                         NSLog("Desired location found! Stopping updating location")
@@ -115,16 +115,16 @@ public class NSLocation : NSObject, CLLocationManagerDelegate {
                         self.locationManager.stopUpdatingLocation()
                         self.updating = false
                     }
+                    
+                } else {
+                    
+                    if self.updating {
+                        locationManager.desiredAccuracy = self.desiredAccuracy
+                        NSLog(String(format: "Setting accuracy to %.0fm!", self.desiredAccuracy))
+                        self.updatingTimer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "hasNotUpdatedLocationForTooLong", userInfo: nil, repeats: false)
+                    }
+                    
                 }
-
-            } else {
-
-                if self.updating {
-                    locationManager.desiredAccuracy = self.desiredAccuracy
-                    NSLog(String(format: "Setting accuracy to %.0fm!", self.desiredAccuracy))
-                    self.updatingTimer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "hasNotUpdatedLocationForTooLong", userInfo: nil, repeats: false)
-                }
-
             }
         }
     }
