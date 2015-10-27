@@ -144,40 +144,6 @@
             </objects>
             <point key="canvasLocation" x="764" y="582"/>
         </scene>
-        <!--Fetch-->
-        <scene sceneID="mIv-Fe-Riz">
-            <objects>
-                <viewController id="EYY-Ac-VYj" customClass="FetchViewController" customModule="NSLocationExample" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mWj-e7-p7p"/>
-                        <viewControllerLayoutGuide type="bottom" id="GMp-fC-n1k"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vpK-Mt-OEv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cS3-Qb-fGg">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </mapView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dw5-HA-uAx">
-                                <rect key="frame" x="20" y="28" width="51" height="31"/>
-                                <connections>
-                                    <action selector="enabledChanged:" destination="EYY-Ac-VYj" eventType="valueChanged" id="JoB-b4-qIq"/>
-                                    <action selector="enabledChanged:" destination="9pv-A4-QxB" eventType="valueChanged" id="aEQ-fg-buj"/>
-                                </connections>
-                            </switch>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Fetch" image="second" id="YQv-zT-9b7"/>
-                    <connections>
-                        <outlet property="mapView" destination="cS3-Qb-fGg" id="O70-QT-wIL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X1K-OZ-RKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="812" y="1394"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -193,7 +159,6 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="IKY-oI-Nsq"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="4wY-xT-Aak"/>
                         <segue destination="Ekj-1r-ish" kind="relationship" relationship="viewControllers" id="SSs-hj-epq"/>
-                        <segue destination="EYY-Ac-VYj" kind="relationship" relationship="viewControllers" id="WUZ-Af-SO6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

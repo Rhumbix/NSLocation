@@ -156,7 +156,7 @@ public class NSLocation : NSObject, CLLocationManagerDelegate {
         }
 
         backgroundTask = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler {
-            [unowned self] in
+            () in
             NSLog("Expiration handler called! Time remaining: %f", UIApplication.sharedApplication().backgroundTimeRemaining)
         }
         assert(backgroundTask != UIBackgroundTaskInvalid)
