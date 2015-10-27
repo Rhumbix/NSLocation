@@ -19,7 +19,7 @@ class AutoAdjustedLocationViewController: UIViewController, CLLocationManagerDel
     
     @IBAction func enabledChanged(sender: UISwitch) {
         if sender.on {
-            self.locationMgr = NSLocation(desiredAccuracy: kCLLocationAccuracyNearestTenMeters, desiredInterval: 60.0*5)
+            self.locationMgr = NSLocation(desiredAccuracy: kCLLocationAccuracyNearestTenMeters, desiredInterval: 60.0*10)
             self.locationMgr!.start(self)
         } else {
             if let unwrappedMgr = self.locationMgr {

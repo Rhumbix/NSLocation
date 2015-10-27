@@ -19,16 +19,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // Support for background fetch
     func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-        
+
+        NSLog("performFetchWithCompletionHandler is called")
+
         if let tabBarController = window?.rootViewController as? UITabBarController,
             viewControllers = tabBarController.viewControllers
         {
             for viewController in viewControllers {
-                if let fetchViewController = viewController as? FetchViewController {
-                    fetchViewController.fetch()
+                if let vc = viewController as? AutoAdjustedLocationViewController {
+                    if let locationManager = vc.locationMgr {
+                        locationManager.ensureLocationIsAwake()
+                    }
                 }
             }
         }
+        completionHandler(.NewData)
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -53,6 +58,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func sendRequest() {
+        var request: NSURLRequest = NSURLRequest(URL: NSURL(string: "http://google.com")!)
+        var response: AutoreleasingUnsafeMutablePointer<NSURLResponse?>=nil
+        do {
+            try NSURLConnection.sendSynchronousRequest(request, returningResponse: response)
+        }
+        catch {
+            
+        }
+    }
 }
 
