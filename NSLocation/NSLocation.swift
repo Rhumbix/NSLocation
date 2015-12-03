@@ -117,16 +117,15 @@ public class NSLocation : NSObject, CLLocationManagerDelegate {
             }
             
             if let unwrappedLocation = self.locationPicker!.pick(location) {
-
-                if let unwrappedDelegate = self.delegate {
-                    if self.updating {
-                        NSLog("Desired location found! Stopping updating location")
+                
+                if self.updating {
+                    NSLog("Desired location found! Stopping updating location")
+                    self.locationManager.stopUpdatingLocation()
+                    self.updating = false
+                    if let unwrappedDelegate = self.delegate {
                         unwrappedDelegate.locationManager!(self.locationManager, didUpdateLocations: [unwrappedLocation])
-                        self.locationManager.stopUpdatingLocation()
-                        self.updating = false
                     }
                 }
-
             } else {
 
                 if self.updating {

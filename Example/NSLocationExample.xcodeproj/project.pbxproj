@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		364A56CD90820911453E7004 /* Pods_NSLocationExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B81739B556AFE5345E070D /* Pods_NSLocationExample.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		9FFB13AD1BCD53FA000685D8 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB13A91BCD53FA000685D8 /* LocationViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		9FFB13AE1BCD53FA000685D8 /* WhateverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB13AA1BCD53FA000685D8 /* WhateverViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		9FFB13AF1BCD53FA000685D8 /* AutoAdjustedLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB13AB1BCD53FA000685D8 /* AutoAdjustedLocationViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		364A56CD90820911453E7004 /* Pods_NSLocationExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B81739B556AFE5345E070D /* Pods_NSLocationExample.framework */; };
+		9FFB13AD1BCD53FA000685D8 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB13A91BCD53FA000685D8 /* LocationViewController.swift */; };
+		9FFB13AE1BCD53FA000685D8 /* WhateverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB13AA1BCD53FA000685D8 /* WhateverViewController.swift */; };
+		9FFB13AF1BCD53FA000685D8 /* AutoAdjustedLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB13AB1BCD53FA000685D8 /* AutoAdjustedLocationViewController.swift */; };
 		F4DECB541BC2ADEE00C7E3AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DECB531BC2ADEE00C7E3AB /* AppDelegate.swift */; };
 		F4DECB591BC2ADEE00C7E3AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DECB571BC2ADEE00C7E3AB /* Main.storyboard */; };
 		F4DECB5B1BC2ADEE00C7E3AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4DECB5A1BC2ADEE00C7E3AB /* Assets.xcassets */; };

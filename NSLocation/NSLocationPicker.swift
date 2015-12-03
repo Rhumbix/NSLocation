@@ -34,6 +34,7 @@ public class NSLocationPicker {
                 return newLocation
         }
         
+        NSLog(String(format: "location counts: %ld --- max: %ld", self.locations.count, self.maximumSamples))
         if self.locations.count >= self.maximumSamples {
             return self.locations.sort({ $0.horizontalAccuracy < $1.horizontalAccuracy }).first
         }
