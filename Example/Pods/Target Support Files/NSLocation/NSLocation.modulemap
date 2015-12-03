@@ -1,6 +1,0 @@
-framework module NSLocation {
-  umbrella header "NSLocation-umbrella.h"
-
-  export *
-  module * { export * }
-}

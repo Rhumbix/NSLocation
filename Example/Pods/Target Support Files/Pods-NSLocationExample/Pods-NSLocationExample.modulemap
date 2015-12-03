@@ -1,6 +1,0 @@
-framework module Pods_NSLocationExample {
-  umbrella header "Pods-NSLocationExample-umbrella.h"
-
-  export *
-  module * { export * }
-}
