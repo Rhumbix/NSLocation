@@ -1,0 +1,14 @@
+language: objective-c
+os: osx
+osx_image: xcode7.3
+podfile: Example/Podfile
+xcode_workspace: NSLocationExample.xcworkspace
+xcode_scheme: NSLocationExample
+before_install:
+  - pod repo update
+  - brew install truncate
+cache:
+  - bundler
+  - cocoapods
+before_script:
+  - bundle exec xcpretty --help
